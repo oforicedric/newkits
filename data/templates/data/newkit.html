@@ -1,0 +1,98 @@
+{% load render_table from django_tables2 %}
+{% load bootstrap %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<head>
+    <script src="{% static 'Newkit/scripts.js' %}"></script>
+
+</head>
+
+
+
+<body>
+
+
+    <form id="submitfilter" method="GET">
+        {{filter.form|bootstrap}}
+        <button onclick="art4()" id="loadleague4">SkyBet Championship</button>
+        <button onclick="art5()" id="loadleague5">SkyBet League 1</button>
+        <button onclick="art6()" id="loadleague6">SkyBet League 2</button>
+        <button onclick="art()" id="loadleague">The Vanarama National League</button>
+        <button onclick="art2()" id="loadleague2">Vanarama National League north</button>
+        <button onclick="art3()" id="loadleague3">Vanarama National League south</button>
+        <button onclick="art10()" id="loadleague10">BetVictor Northern - Premier</button>
+        <button onclick="art7()" id="loadleague7">BetVictor Isthmian - Premier</button>
+        <button onclick="art8()" id="loadleague8">BetVictor Southern - Premier Central</button>
+        <button onclick="art9()" id="loadleague9">BetVictor Southern - Premier South</button>
+
+        <button type="submit" class="btn btn-primary">Filter</button>
+        <ul>
+            {% for snippet in filter.qs%}
+            <li>
+                <a href="/home/payments">{{snippet.team}}  </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <script>
+            function art() {
+                var searchtext = document.getElementById('loadleague').textContent;
+                document.getElementById('id_league__icontains').value = searchtext;
+            };
+            art()
+            function art2() {
+                var searchtext2 = document.getElementById('loadleague2').textContent;
+                document.getElementById('id_league__icontains').value = searchtext2;
+            };
+            art2()
+            function art3() {
+                var searchtext3 = document.getElementById('loadleague3').textContent;
+                document.getElementById('id_league__icontains').value = searchtext3;
+            };
+            art3()
+            function art4() {
+                var searchtext = document.getElementById('loadleague4').textContent;
+                document.getElementById('id_league__icontains').value = searchtext;
+            };
+            art4()
+            function art5() {
+                var searchtext2 = document.getElementById('loadleague5').textContent;
+                document.getElementById('id_league__icontains').value = searchtext2;
+            };
+            art5()
+            function art6() {
+                var searchtext3 = document.getElementById('loadleague6').textContent;
+                document.getElementById('id_league__icontains').value = searchtext3;
+            };
+            art6()
+            function art7() {
+                var searchtext = document.getElementById('loadleague7').textContent;
+                document.getElementById('id_league__icontains').value = searchtext;
+            };
+            art7()
+            function art8() {
+                var searchtext2 = document.getElementById('loadleague8').textContent;
+                document.getElementById('id_league__icontains').value = searchtext2;
+            };
+            art8()
+            function art9() {
+                var searchtext3 = document.getElementById('loadleague9').textContent;
+                document.getElementById('id_league__icontains').value = searchtext3;
+            };
+            function art10() {
+                var searchtext3 = document.getElementById('loadleague10').textContent;
+                document.getElementById('id_league__icontains').value = searchtext3;
+            };
+            art10()
+            art9()
+
+
+        </script>
+
+</body>
+
+</html>

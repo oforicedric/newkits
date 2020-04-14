@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+
+    <title>Your Team</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{% static 'Newkit/scripts.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+
+<body onload="getTextContent(window.localStorage.getItem('team_name'));">
+    <h1 id="page_title">  </h1>
+    <!--<h1 id="test">s  </h1>-->
+    
+    <!--{% for post in msg %}
+    <h1 id="see">{{post.name}}</h1>
+    {% endfor %}-->
+    <h2>Support your Team !</h2>
+    <form id="x" method="POST">
+        {% csrf_token %}
+        <input type="text" id="payment_input" placeholder="5.00"><br /><br />
+        <button id="submit_value" type="submit">sub</button>
+    </form>
+    <form id="payment-form">
+        <div id="card-element">
+            <!-- Elements will create input elements here -->
+        </div>
+
+        <!-- We'll put the error messages in this element -->
+        <div id="card-errors" role="alert"></div>
+
+        <button id="submit">Pay</button>
+    </form>
+    <!--   {% for post in all_msg %}-->
+    <!--{% endfor %}-->
+    <script>
+
+        $(document).ready(function () {
+
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = cookies[i].trim();
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            var csrftoken = getCookie('csrftoken');
+            function csrfSafeMethod(method) {
+                // these HTTP methods do not require CSRF protection
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            })
+
+            $("#payment_input").change(function () {
+                console.log($(this).val())
+            });
+
+            $('#submit_value').click(function (e) {
+                e.preventDefault();
+                var value = $('#payment_input').val();
+
+                $.ajax({
+                    url: '/payments/charge/',
+                    type: 'POST',
+                    data: { 'mate': value },
+                    success: function () {
+                        console.log('hi');
+
+                    },
+                }).done(function() {
+                    $.ajax({
+                        url: "/payments/charge/",
+                        data: {
+                            "name": "Stuart",
+                            "donation": "9000",
+                        },
+                        type: "POST",
+                        //success: function () {
+                        //    console.log("2ndajax");
+                        //},
+                    }).done(function (data) {
+                        //  $.ajax({
+                        //      type:"GET"
+                        //      dataType: "json",
+                        ////      url:"/payments/supprt/"
+                        //      success:function 
+                        //  })
+
+
+
+                        $('#test').html(data);
+                        console.log(data);
+                        //            window.location.href = "/payments/support/"
+                    });
+
+                });
+
+
+
+                    //done(function (data) {
+                    //console.log(data)
+
+
+                    var style = {
+                        base: {
+                            color: "#32325d",
+                        }
+                    };
+
+                    var stripe = Stripe('pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY');
+                    var elements = stripe.elements();
+                    var card = elements.create("card", { style: style });
+                    card.mount("#card-element");
+                    card.addEventListener('change', function (event) {
+                        var displayError = document.getElementById('card-errors');
+                        if (event.error) {
+                            displayError.textContent = event.error.message;
+                        } else {
+                            displayError.textContent = '';
+                        }
+                    });
+
+                    var form = document.getElementById('payment-form');
+
+                form.addEventListener('submit', function (ev) {
+                    ev.preventDefault();
+
+                    stripe.confirmCardPayment(data, {
+                        payment_method: {
+                            card: card,
+                            billing_details: {
+                                name: 'Jenny Rosen'
+                            }
+                        }
+                    }).then(function (result) {
+                        if (result.error) {
+                            // Show error to your customer (e.g., insufficient funds)
+                            console.log(result.error.message);
+                        } else {
+                            // The payment has been processed!
+                            if (result.paymentIntent.status === 'succeeded') {
+                                // Show a success message to your customer
+                                // There's a risk of the customer closing the window before callback
+                                // execution. Set up a webhook or plugin to listen for the
+                                // payment_intent.succeeded event that handles any business critical
+                                // post-payment actions.
+                            }
+                }
+                        });
+                    }
+
+
+                )
+            });
+
+        });
+    </script>
+</body>
+</html>

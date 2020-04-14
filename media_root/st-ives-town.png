@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<title>Page Not Found | Football Web Pages</title>
+
+<meta name="apple-itunes-app" content="app-id=1078023060">
+<meta name="description" content="Live Football Scores, League Tables, Form Guides, Attendances, Latest News and other stats from the Premier League, Football League and Non-League football">
+<meta name="referrer" content="origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+<base href="https://www.footballwebpages.co.uk/" />
+
+<link href="favicon-32.png?1534241716" rel="icon" sizes="32x32" type="image/png" />
+<link href="favicon-16.png?1534241716" rel="icon" sizes="16x16" type="image/png" />
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" type="text/css" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="css/bootstrap-additions.min.css?1563229965" rel="stylesheet" />
+<link href="css/wwwnew.min.css?1582630777" rel="stylesheet" type="text/css" />
+
+<script defer src="https://kit.fontawesome.com/6195563a7b.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="js/slotsnew.min.js?1573508756"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+	google_ad_client: "ca-pub-8644467920895275",
+	enable_page_level_ads: true,
+	overlays: {bottom: true}
+});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+ga("create", "UA-2344468-1", "auto");
+ga("send", "pageview");
+</script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm sticky-top" id="nav">
+
+<div class="container">
+
+<a class="d-sm-none navbar-brand" href="#" data-toggle="collapse" data-target="#menu"><img class="lazy" data-src="graphics/logo-32.png?1551220618" alt="" /><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"><i class="fas fa-bars"></i></button>Football Web Pages</a>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav mr-auto">
+
+<li class="nav-item"><a class="nav-link" href="/" title="Home"><span class="d-none d-sm-inline"><i class="fas fa-home fa-lg"></i></span><span class="d-sm-none">Home</span></a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="League">League</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="premier-league" title="Premier League">Premier League</a>
+<a class="dropdown-item" href="championship" title="Sky Bet Championship">Sky Bet Championship</a>
+<a class="dropdown-item" href="league-one" title="Sky Bet League One">Sky Bet League One</a>
+<a class="dropdown-item" href="league-two" title="Sky Bet League Two">Sky Bet League Two</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="champions-league" title="Champions League">Champions League</a>
+<a class="dropdown-item" href="europa-league" title="Europa League">Europa League</a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="Steps 1-3">Steps 1-3</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="national-league" title="Vanarama National League">Vanarama National League</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="national-league-north" title="Vanarama National North">Vanarama National North</a>
+<a class="dropdown-item" href="national-league-south" title="Vanarama National South">Vanarama National South</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="northern-premier-league-premier-division" title="BetVictor Northern - Premier">BetVictor Northern - Premier</a>
+<a class="dropdown-item" href="isthmian-football-league-premier-division" title="BetVictor Isthmian - Premier">BetVictor Isthmian - Premier</a>
+<a class="dropdown-item" href="southern-football-league-premier-central-division" title="BetVictor Southern - Premier Central">BetVictor Southern - Premier Central</a>
+<a class="dropdown-item" href="southern-football-league-premier-south-division" title="BetVictor Southern - Premier South">BetVictor Southern - Premier South</a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="Step 4">Step 4</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="northern-premier-league-north-west-division" title="BetVictor Northern - North West">BetVictor Northern - North West</a>
+<a class="dropdown-item" href="northern-premier-league-south-east-division" title="BetVictor Northern - South East">BetVictor Northern - South East</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="isthmian-football-league-north-division" title="BetVictor Isthmian - North">BetVictor Isthmian - North</a>
+<a class="dropdown-item" href="isthmian-football-league-south-central-division" title="BetVictor Isthmian - South Central">BetVictor Isthmian - South Central</a>
+<a class="dropdown-item" href="isthmian-football-league-south-east-division" title="BetVictor Isthmian - South East">BetVictor Isthmian - South East</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="southern-football-league-division-one-central" title="BetVictor Southern - Central">BetVictor Southern - Central</a>
+<a class="dropdown-item" href="southern-football-league-division-one-south" title="BetVictor Southern - South">BetVictor Southern - South</a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="Cups">Cups</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="fa-cup" title="Emirates FA Cup">Emirates FA Cup</a>
+<a class="dropdown-item" href="efl-cup" title="Carabao Cup">Carabao Cup</a>
+<a class="dropdown-item" href="efl-trophy" title="Checkatrade Trophy">Checkatrade Trophy</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="fa-trophy" title="Buildbase FA Trophy">Buildbase FA Trophy</a>
+<a class="dropdown-item" href="fa-vase" title="Buildbase FA Vase">Buildbase FA Vase</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="northern-premier-league-cup" title="Integro League Cup">Integro League Cup</a>
+<a class="dropdown-item" href="isthmian-football-league-cup" title="Velocity Trophy">Velocity Trophy</a>
+<a class="dropdown-item" href="southern-football-league-cup" title="CSS League Challenge Cup">CSS League Challenge Cup</a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="Europe">Europe</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="french-ligue-1" title="French Ligue 1">French Ligue 1</a>
+<a class="dropdown-item" href="german-bundesliga" title="German Bundesliga">German Bundesliga</a>
+<a class="dropdown-item" href="italian-serie-a" title="Italian Serie A">Italian Serie A</a>
+<a class="dropdown-item" href="spanish-la-liga" title="Spanish La Liga">Spanish La Liga</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="belgian-first-division-a" title="Belgian First Division A">Belgian First Division A</a>
+<a class="dropdown-item" href="dutch-eredivisie" title="Dutch Eredivisie">Dutch Eredivisie</a>
+<a class="dropdown-item" href="portuguese-primeira-liga" title="Portuguese Primeira Liga">Portuguese Primeira Liga</a>
+<a class="dropdown-item" href="russian-premier-league" title="Russian Premier League">Russian Premier League</a>
+<a class="dropdown-item" href="turkish-super-lig" title="Turkish Süper Lig">Turkish Süper Lig</a>
+<a class="dropdown-item" href="welsh-premier-league" title="Welsh Premier League">Welsh Premier League</a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="Scotland">Scotland</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="scottish-premiership" title="Ladbrokes Premiership">Ladbrokes Premiership</a>
+<a class="dropdown-item" href="scottish-championship" title="Ladbrokes Championship">Ladbrokes Championship</a>
+<a class="dropdown-item" href="scottish-league-one" title="Ladbrokes League One">Ladbrokes League One</a>
+<a class="dropdown-item" href="scottish-league-two" title="Ladbrokes League Two">Ladbrokes League Two</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="scottish-cup" title="William Hill Scottish Cup">William Hill Scottish Cup</a>
+<a class="dropdown-item" href="scottish-league-cup" title="Betfred Cup">Betfred Cup</a>
+<a class="dropdown-item" href="scottish-challenge-cup" title="Tunnock's Challenge Cup">Tunnock's Challenge Cup</a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" title="Women">Women</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="womens-super-league" title="FA Women's Super League">FA Women's Super League</a>
+<a class="dropdown-item" href="womens-championship" title="FA Women's Championship">FA Women's Championship</a>
+<a class="dropdown-item" href="womens-national-league-north" title="FA Women's National League North">FA Women's National League North</a>
+<a class="dropdown-item" href="womens-national-league-south" title="FA Women's National League South">FA Women's National League South</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="womens-fa-cup" title="SSE Women's FA Cup">SSE Women's FA Cup</a>
+<a class="dropdown-item" href="womens-league-cup" title="FA Women's League Cup">FA Women's League Cup</a>
+</div>
+</li>
+
+</ul>
+
+<div id="search-form" style="display:none">
+
+<form action="search" method="post">
+<input class="form-control typeahead" data-provide="typeahead" id="query" name="query" placeholder="Search..." type="text" value="" autocomplete="off" onblur="searchBlur()" onkeyup="searchChanged()" />
+</form>
+
+</div>
+
+<div class="d-none d-sm-flex navbar-nav">
+<a class="nav-link" href="vidiprinter" title="Vidiprinter"><i class="fas fa-list-ul fa-lg"></i></a>
+<a class="nav-link" href="search" id="search-toggle" title="Search" onclick="return toggleSearchForm()"><i class="fas fa-search fa-lg"></i></a>
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="clearfix container" id="content">
+
+<h1><a href="/"><img class="lazy" data-src="graphics/logo-56.png?1550082093" alt="" /></a>Football Web Pages</h1>
+
+<div id="top-slot">
+<script>showHorizontalTop("top-slot");</script>
+</div>
+
+<h2>Page Not Found</h2>
+
+<p class="title">Sorry but for some reason we couldn't find the page that you requested
+<br /><br />
+Try going to the <a href="/">front page</a> or looking through the menus</p>
+
+<div class="clearfix"></div>
+
+<div id="bottom-slot">
+<script>showHorizontalBottom("bottom-slot");</script>
+</div>
+
+</div>
+
+<footer class="container">
+
+<div class="row" id="footer-menu">
+
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="about-us">About us</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="archives">Archives</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#102;&#111;&#111;&#116;&#98;&#97;&#108;&#108;&#119;&#101;&#98;&#112;&#97;&#103;&#101;&#115;&#46;&#99;&#111;&#46;&#117;&#107;">Contact us</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="cookies">Cookies</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="corrections">Corrections</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="feeds">Feeds</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="app">iOS / Android apps</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="privacy-policy">Privacy policy</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="results-by-email">Results by email</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="status">Status</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="terms-and-conditions">Terms &amp; conditions</a></div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="twitter-accounts">Twitter accounts</a></div>
+
+</div>
+
+<div id="fwp-footer">
+
+<img class="lazy" data-src="graphics/logo-48.png?1550082095" alt="FWP Logo" title="Football Web Pages" />
+
+<p><span class="d-none d-sm-inline">This site is p</span><span class="d-sm-none">P</span>rovided by <a href="https://www.footballwebpages.co.uk">Football Web Pages</a><br /><span class="d-none d-sm-inline">You can </span><a href="https://clubs.footballwebpages.co.uk/create">Create a website for your club</a> <span class="d-none d-sm-inline">right </span>now!</p>
+
+<p class="small">Company Number 8718734 | Registered in England<span>&copy; Football Web Pages Ltd 2019</span></p>
+
+</div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="lib/bootstrap3-typeahead/js/bootstrap3-typeahead.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var link=document.createElement("link");
+	link.setAttribute("href","https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css");
+	link.setAttribute("rel","stylesheet");
+	link.setAttribute("type","text/css");
+	document.getElementsByTagName("head")[0].appendChild(link);
+
+	window.cookieconsent.initialise({
+		"content": {
+			"dismiss": "Allow cookies",
+			"href": "https://www.footballwebpages.co.uk/privacy",
+			"link": "Privacy Policy"
+		},
+		"cookie": {
+			"domain": "footballwebpages.co.uk"
+		},
+		"palette": {
+			"popup": {
+				"background": "#292b2c",
+				"text": "#ffffff"
+			},
+			"button": {
+				"background": "#418a41",
+				"text": "#ffffff"
+			}
+		},
+		"theme": "classic"
+	})
+});
+</script>
+<script src="js/wwwnew.min.js?1566808322"></script>
+
+</body>
+</html>
