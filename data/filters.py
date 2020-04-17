@@ -7,7 +7,7 @@ class ClubFilter(django_filters.FilterSet):
         model = Club
         fields = {
             'team':['icontains'],
-            'league':['icontains'],
+           'league':['icontains'],
             }
     
 

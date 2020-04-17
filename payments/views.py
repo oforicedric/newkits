@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.views.generic.base import TemplateView
+from django.views.generic import ListView
 from django.conf import settings 
+from django.core import serializers
 import stripe
 from bs4 import BeautifulSoup
 import requests
@@ -9,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from . import models
 from .models import GetAmount
 from django.views.decorators.csrf import ensure_csrf_cookie
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.utils.decorators import method_decorator
 import json
 from posts import models 
@@ -40,6 +42,8 @@ def scrape_amount(request):
 
             secret = intent.client_secret
             return HttpResponse(secret)
+
+        
         else:
             y = request.POST
             user = y["name"] 
@@ -48,10 +52,8 @@ def scrape_amount(request):
             message.name = user
             message.value = donation
             message.save()
-            all_msg = Posts.objects.all()
-            all_msgs = {"msg":all_msg}
-            #return render(request, "payments/home.html", all_msgs)
-            return HttpResponse(all_msgs)
+            return JsonResponse({'name': message.name, 'value': message.value})
+
     else :
         return render(request, 'payments/home.html')
 
@@ -61,8 +63,10 @@ def amountview(request):
     return render(request, "payments/stripe.html")
 
 
-class StripeView(TemplateView):
+class StripeView(ListView):
     template_name ="payments/prestripe.html"
+    model = Posts
+    context_object_name = 'posts'
     
     def get_context_data(self, **kwargs): #**kwargs is basically a dictionary of any key and value pairs 
         context = super().get_context_data(**kwargs) #super() gets the context from the parent class ie StipeViews
@@ -81,6 +85,3 @@ class HomePageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['key'] = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
         return context
-
-
-

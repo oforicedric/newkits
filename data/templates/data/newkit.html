@@ -7,36 +7,46 @@
 
 <head>
     <script src="{% static 'Newkit/scripts.js' %}"></script>
-
+    <link rel="stylesheet" type="text/css" href="{% static 'Newkit/style.css' %}" />
 </head>
-
-
 
 <body>
 
-
     <form id="submitfilter" method="GET">
         {{filter.form|bootstrap}}
-        <button onclick="art4()" id="loadleague4">SkyBet Championship</button>
-        <button onclick="art5()" id="loadleague5">SkyBet League 1</button>
-        <button onclick="art6()" id="loadleague6">SkyBet League 2</button>
-        <button onclick="art()" id="loadleague">The Vanarama National League</button>
-        <button onclick="art2()" id="loadleague2">Vanarama National League north</button>
-        <button onclick="art3()" id="loadleague3">Vanarama National League south</button>
-        <button onclick="art10()" id="loadleague10">BetVictor Northern - Premier</button>
-        <button onclick="art7()" id="loadleague7">BetVictor Isthmian - Premier</button>
-        <button onclick="art8()" id="loadleague8">BetVictor Southern - Premier Central</button>
-        <button onclick="art9()" id="loadleague9">BetVictor Southern - Premier South</button>
 
-        <button type="submit" class="btn btn-primary">Filter</button>
-        <ul>
+        <button type="submit" id="team_search" class="btn btn-primary">Search</button>
+ 
+        <h2>
+            Supporting the teams that need it the most during Covid-19. 	&#9917;🏆
+        </h2>
+        <ul class="the-list">
             {% for snippet in filter.qs%}
-            <li>
+            <li class="list-item">
                 <a href="/home/payments">{{snippet.team}}  </a>
             </li>
             {% endfor %}
-
         </ul>
+
+        <div id="menuSlideContainer">
+            <div id="menuSlideButton"><center><div class="pad">Leagues</div></center></div>
+            <div id="menuSlideContent">
+                <div id="menuSlidePad">
+                    
+        <button form="submitfilter" onclick="art4()" id="loadleague4">SkyBet Championship</button>
+        <button form="submitfilter" onclick="art5()" id="loadleague5">SkyBet League 1</button>
+        <button form="submitfilter" onclick="art6()" id="loadleague6">SkyBet League 2</button>
+        <button form="submitfilter" onclick="art()" id="loadleague">The Vanarama National League</button>
+        <button form="submitfilter" onclick="art2()" id="loadleague2">Vanarama National League north</button>
+        <button form="submitfilter" onclick="art3()" id="loadleague3">Vanarama National League south</button>
+        <button form="submitfilter" onclick="art10()" id="loadleague10">BetVictor Northern - Premier</button>
+        <button form="submitfilter" onclick="art7()" id="loadleague7">BetVictor Isthmian - Premier</button>
+        <button form="submitfilter" onclick="art8()" id="loadleague8">BetVictor Southern - Premier Central</button>
+        <button form="submitfilter" onclick="art9()" id="loadleague9">BetVictor Southern - Premier South</button>
+
+                </div>
+            </div>
+        </div>
 
         <script>
             function art() {
@@ -89,10 +99,6 @@
             };
             art10()
             art9()
-
-
         </script>
-
 </body>
-
 </html>

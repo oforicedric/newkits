@@ -2,8 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\data",
-    "\\data\\templates",
-    "\\data\\templates\\data",
     "\\Newkit",
     "\\payments",
     "\\payments\\templates",
@@ -11,6 +9,6 @@
     "\\static",
     "\\static\\Newkit"
   ],
-  "SelectedNode": "\\payments\\views.py",
+  "SelectedNode": "\\data\\filters.py",
   "PreviewInSolutionExplorer": false
 }
