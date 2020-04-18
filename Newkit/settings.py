@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'slavy%2z!l)x=l+qrnk@iby+(4edcdq=n%dounat8b3=n$e5b#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'newkit.herokuapp.com','localhost']
 
 
 
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'bootstrapform',
     'payments.apps.PaymentsConfig',
     'posts.apps.PostsConfig',
-    'newkit.herokuapp.com',
+   
   
 ]
 
@@ -143,3 +143,4 @@ MEDIA_ROOT =os.path.join(VENV_PATH, 'Newkit/media_root')
 
 STRIPE_PUBLISHABLE_KEY = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
 STRIPE_SECRET_KEY = 'sk_test_iBjWZaOdbwtP44prkHZeD2Jy002SrATNFK'
+django_heroku.settings(locals())
