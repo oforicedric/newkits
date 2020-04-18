@@ -40,19 +40,20 @@
     </div>
 
     <div>
-    <h3 id="donate">
-    Donate
-    </h3>
-
-
-
 
     <form id="x" method="POST">
         {% csrf_token %}
+        <h3 id="donate">
+            Name
+        </h3>
+        <input type="text" id="name_input" style="width:90%;" placeholder="Your full name">
+        <h3 id="donate">
+            Donate
+        </h3>
         <input type="text" id="payment_input" style="width:90%;" placeholder="&pound; 5.00"><br /><br />
             <h3 style="font-size:12px;color:#9E9EA1;margin-top:-15px;padding-top:0px;">
-    To Support the team during Covid-19
-    </h3>
+                 To Support the team during Covid-19
+            </h3>
         <button id="submit_value" onclick="showerz();" type="submit">Donate</button>
      
     </form>
@@ -69,10 +70,10 @@
     <!--   {% for post in all_msg %}-->
     <!--{% endfor %}-->
 			
-<div style="margin-bottom:15%;margin-top:5%;" class="sharethis-inline-share-buttons"></div>
+    <div style="margin-bottom:15%;margin-top:5%;" class="sharethis-inline-share-buttons"></div>
       <div id="posts">
         {% for post in posts %}
-        <p id="the-post" >{{ post.name }} donated &pound;{{ post.value }} to team</p>
+        <p id="the-post" >{{ post.name }} donated &pound;{{ post.value }} to {{ post.team.team }} team</p>
         {% endfor %}
     </div>
     <script>
@@ -118,12 +119,14 @@
                     url: "{% url 'payments:charge' %}",
                     type: 'POST',
                     data: {
-                        "name": "Stuart",
-                        "donation": "9000",
+                        "name": $('#name_input').val(),
+                        "donation": $('#payment_input').val(),
+                        "team": window.localStorage.getItem('team_name'),
                     },
                     success: function (response) {
                         var p = document.createElement("p");
-                        p.innerHTML = response.name + " " + response.value;
+                        p.id = "the-post";
+                        p.innerHTML = response.name + " donated &pound;" + response.value + " to " + response.team + " team";
                         document.getElementById("posts").appendChild(p)
                     }
                 })
@@ -132,22 +135,17 @@
 
             $('#submit_value').click(function (e) {
                 e.preventDefault();
-                var values = $('#payment_input').val();
-              //  function addZeroes(num) {
-                  //  const dec = value.split('')[1] //takes the first val but theres only one anyways
-                    // const len = dec && dec.length > 2 ? dec.length : 2
-                var value = "" + Number(values) + "00";
-           //     }
-
-
+                var value = $('#payment_input').val();
 
                 $.ajax(
                     {
                         url: "{% url 'payments:charge' %}",
                         type: 'POST',
-                        data: { 'mate': value },
+                        data: {
+                             'mate': value,
+                            },
                         success: function () {
-                            console.log(value);
+                            console.log('hi');
 
                         },
                     });
