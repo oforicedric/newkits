@@ -70,6 +70,9 @@ class StripeView(ListView):
     template_name ="payments/prestripe.html"
     model = Posts
     context_object_name = 'posts'
+
+    def get_queryset(self):
+        return Posts.objects.all().order_by('-id')
     
     def get_context_data(self, **kwargs): #**kwargs is basically a dictionary of any key and value pairs 
         context = super().get_context_data(**kwargs) #super() gets the context from the parent class ie StipeViews

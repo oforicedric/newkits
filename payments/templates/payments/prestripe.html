@@ -127,7 +127,7 @@
                         var p = document.createElement("p");
                         p.id = "the-post";
                         p.innerHTML = response.name + " donated &pound;" + response.value + " to " + response.team + " team";
-                        document.getElementById("posts").appendChild(p)
+                        $("#posts").prepend(p)
                     }
                 })
             });
