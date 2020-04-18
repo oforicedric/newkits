@@ -8,8 +8,8 @@ from django.conf import settings
 class Club(models.Model):
     team = models.CharField(max_length=120)
     league = models.CharField(max_length=120)
-    pic = models.ImageField() #needs to be img
-    gender = models.CharField(max_length=120,default="male")
+   # pic = models.ImageField() #needs to be img
+    #gender = models.CharField(max_length=120,default="male")
 
     class Meta:
         app_label = 'data'
