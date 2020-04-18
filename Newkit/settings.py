@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'bootstrapform',
     'payments.apps.PaymentsConfig',
     'posts.apps.PostsConfig',
+    'newkit.herokuapp.com',
   
 ]
 
