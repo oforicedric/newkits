@@ -69,7 +69,7 @@ def scrape(request):
                 new_club.gender = "male"
                 new_club.save()
               
-    return redirect('/')
+    return redirect('/newkits')
 # club,league,pic,gender in a table
 
 def payment (request):
