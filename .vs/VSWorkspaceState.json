@@ -6,9 +6,11 @@
     "\\payments",
     "\\payments\\templates",
     "\\payments\\templates\\payments",
+    "\\posts",
+    "\\posts\\__pycache__",
     "\\static",
     "\\static\\Newkit"
   ],
-  "SelectedNode": "\\data\\filters.py",
+  "SelectedNode": "\\posts\\__pycache__\\views.cpython-36.pyc",
   "PreviewInSolutionExplorer": false
 }
