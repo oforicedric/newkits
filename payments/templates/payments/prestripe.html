@@ -132,7 +132,14 @@
 
             $('#submit_value').click(function (e) {
                 e.preventDefault();
-                var value = $('#payment_input').val();
+                var values = $('#payment_input').val();
+              //  function addZeroes(num) {
+                  //  const dec = value.split('')[1] //takes the first val but theres only one anyways
+                    // const len = dec && dec.length > 2 ? dec.length : 2
+                var value = "" + Number(values) + "00";
+           //     }
+
+
 
                 $.ajax(
                     {
@@ -140,7 +147,7 @@
                         type: 'POST',
                         data: { 'mate': value },
                         success: function () {
-                            console.log('hi');
+                            console.log(value);
 
                         },
                     });
