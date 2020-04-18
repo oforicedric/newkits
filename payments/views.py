@@ -14,9 +14,10 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.http import HttpResponse, JsonResponse
 from django.utils.decorators import method_decorator
 import json
+from data.models import Club
 from posts import models 
 from posts.models import Posts
-
+    
 #@require_POST()
 @csrf_exempt
 def scrape_amount(request):
@@ -31,10 +32,10 @@ def scrape_amount(request):
             intent = stripe.PaymentIntent.create(
             amount= x,
             currency='gbp',
-            metadata={'integration_check': 'accept_a_payment'},)
-
-            new_post = Posts()
-
+            metadata={
+                'integration_check': 'accept_a_payment'
+                }
+            )
             context = {
                 "secret": intent.client_secret,
                 "feed"  : Posts.objects.all(),
@@ -48,11 +49,13 @@ def scrape_amount(request):
             y = request.POST
             user = y["name"] 
             donation = y["donation"]
+            team = y["team"].strip()
             message = Posts()
             message.name = user
             message.value = donation
+            message.team = Club.objects.get(team=team)
             message.save()
-            return JsonResponse({'name': message.name, 'value': message.value})
+            return JsonResponse({'name': message.name, 'value': message.value, 'team': message.team.team})
 
     else :
         return render(request, 'payments/home.html')
