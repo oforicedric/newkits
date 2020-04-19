@@ -28,7 +28,7 @@ def scrape_amount(request):
             number.value = x #request.POST.get('stripe_val') #sets value attribut equal to the server side value
             number.save() #saves object down to be used later
 
-            stripe.api_key = 'sk_test_iBjWZaOdbwtP44prkHZeD2Jy002SrATNFK'
+            stripe.api_key = os.environ.get("STRIPE_SECRET")
             intent = stripe.PaymentIntent.create(
             amount= x,
             currency='gbp',
