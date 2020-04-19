@@ -178,11 +178,15 @@ STRIPE_PUBLISHABLE_KEY = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
 STRIPE_SECRET_KEY = 'sk_test_iBjWZaOdbwtP44prkHZeD2Jy002SrATNFK'
 django_heroku.settings(locals())
 
-# Change Database Configuration to Heroku's Database
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+environment = os.environ.get("ENVIRONMENT", default="development")
+# Production Environment Settings
+if environment == "production":
+    DEBUG = False  # Must be the case in production
+    # Change Database Configuration to Heroku's Database
+    import dj_database_url 
+    prod_db  =  dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(prod_db)
 
-SECURE_BROWSER_XSS_FILTER = True  # Protects aganist cross site scripting
-X_FRAME_OPTIONS = 'DENY'    # Protection for Clickjacking
-SECURE_SSL_REDIRECT = True  # Redirect all http requests to https
+    SECURE_BROWSER_XSS_FILTER = True  # Protects aganist cross site scripting
+    X_FRAME_OPTIONS = 'DENY'    # Protection for Clickjacking
+    SECURE_SSL_REDIRECT = True  # Redirect all http requests to https
