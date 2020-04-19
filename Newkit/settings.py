@@ -22,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'slavy%2z!l)x=l+qrnk@iby+(4edcdq=n%dounat8b3=n$e5b#'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in production!'newkit.herokuapp.com'
 DEBUG = False
 
-ALLOWED_HOSTS = [ 'newkit.herokuapp.com','localhost']
+ALLOWED_HOSTS = [ 'localhost','newkit.herokuapp.com']
 
 
 LOGGING = {
@@ -33,36 +33,30 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': ('%(asctime)s [%(process)d] [%(levelname)s] '
-                       'pathname=%(pathname)s lineno=%(lineno)s '
-                       'funcname=%(funcName)s %(message)s'),
-            'datefmt': '%Y-%m-%d %H:%M:%S'
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
         },
         'simple': {
             'format': '%(levelname)s %(message)s'
-        }
+        },
     },
     'handlers': {
-        'null': {
+        'file': {
             'level': 'DEBUG',
-            'class': 'logging.NullHandler',
-        },
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
+            'class': 'logging.FileHandler',
+            'filename': 'mysite.log',
             'formatter': 'verbose'
-        }
+        },
     },
     'loggers': {
         'django': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
+            'handlers':['file'],
             'propagate': True,
+            'level':'DEBUG',
         },
-        'django.request': {
-            'handlers': ['console'],
+        'newkit': {
+            'handlers': ['file'],
             'level': 'DEBUG',
-            'propagate': False,
         },
     }
 }
