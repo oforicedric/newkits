@@ -1,1 +1,1 @@
-web: gunicorn Newkit.wsgi
+web: gunicorn Newkit.wsgi --log-file -

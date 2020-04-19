@@ -177,3 +177,7 @@ MEDIA_ROOT =os.path.join(VENV_PATH, 'Newkit/media_root')
 STRIPE_PUBLISHABLE_KEY = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
 STRIPE_SECRET_KEY = 'sk_test_iBjWZaOdbwtP44prkHZeD2Jy002SrATNFK'
 django_heroku.settings(locals())
+
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
