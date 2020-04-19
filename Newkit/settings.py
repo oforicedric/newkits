@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'slavy%2z!l)x=l+qrnk@iby+(4edcdq=n%dounat8b3=n$e5b#'
 
 # SECURITY WARNING: don't run with debug turned on in production!'newkit.herokuapp.com'
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ 'localhost','newkit.herokuapp.com']
 

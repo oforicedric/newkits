@@ -65,8 +65,8 @@ def scrape(request):
                 new_club =Club()
                 new_club.team = teams
                 new_club.pic = local_filename
-                new_club.league = "SkyBet Championship"
-                new_club.gender = "male"
+            #    new_club.league = "SkyBet Championship"
+           #     new_club.gender = "male"
                 new_club.save()
               
     return redirect('/newkits')

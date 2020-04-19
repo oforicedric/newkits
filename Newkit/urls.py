@@ -28,7 +28,7 @@ urlpatterns = [
     path('home/', include('data.urls', namespace ="data")),
     path('posts/', include('posts.urls', namespace ="posts")),
     path('', RedirectView.as_view(url='/home/', permanent=True)),
-    path('scrape/',views.scrape, name="scrapee"),
+    path('scrape/',scrape),
     path('newkits/',ClubListView.as_view())
 
 ]
