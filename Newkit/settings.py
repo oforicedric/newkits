@@ -174,8 +174,9 @@ MEDIA_ROOT =os.path.join(VENV_PATH, 'Newkit/media_root')
 
 
 
-STRIPE_PUBLISHABLE_KEY = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
-STRIPE_SECRET_KEY = 'sk_test_iBjWZaOdbwtP44prkHZeD2Jy002SrATNFK'
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET")
+
 django_heroku.settings(locals())
 
 import dj_database_url 
