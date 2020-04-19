@@ -76,7 +76,7 @@ class StripeView(ListView):
     
     def get_context_data(self, **kwargs): #**kwargs is basically a dictionary of any key and value pairs 
         context = super().get_context_data(**kwargs) #super() gets the context from the parent class ie StipeViews
-        context['key'] = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY' #if context contains 'key' in dictionary somwhere set the value to that publishable key
+        context['key'] = os.environ.get("STRIPE_PUBLISHABLE") #if context contains 'key' in dictionary somwhere set the value to that publishable key
         return context #returns the value for 'key' IN THE TEMPLATE in {{key}}
 
     @method_decorator(csrf_exempt)
@@ -89,5 +89,5 @@ class HomePageView(TemplateView):
     
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
-        context['key'] = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
+        context['key'] = os.environ.get("STRIPE_PUBLISHABLE")
         return context
