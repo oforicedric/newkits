@@ -27,7 +27,7 @@ urlpatterns = [
     path('payments/',include('payments.urls',namespace="payments")),
     path('home/', include('data.urls', namespace ="data")),
     path('posts/', include('posts.urls', namespace ="posts")),
-    path('', RedirectView.as_view(url='/home/', permanent=True)),
+    path('', RedirectView.as_view(url='/newkits/', permanent=True)),
     path('scrape/',scrape),
     path('newkits/',ClubListView.as_view())
 
