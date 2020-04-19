@@ -190,3 +190,15 @@ if environment == "production":
     SECURE_BROWSER_XSS_FILTER = True  # Protects aganist cross site scripting
     X_FRAME_OPTIONS = 'DENY'    # Protection for Clickjacking
     SECURE_SSL_REDIRECT = True  # Redirect all http requests to https
+
+    # Ensure Strict Transport Security Header
+    SECURE_HSTS_SECONDS = 3600  
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True 
+    SECURE_HSTS_PRELOAD = True
+    
+    # Set nosniff
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+
+    # Secure Cookies
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
