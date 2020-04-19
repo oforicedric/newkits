@@ -1,237 +1,278 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
+
 <html>
 
 <head>
 
     <title>Your Team</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="{% static 'Newkit/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Newkit/style.css' %}" />
     <script src="https://js.stripe.com/v3/"></script>
     <script src="{% static 'Newkit/scripts.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e9a129ae660d500120738ae&product=inline-share-buttons" async="async"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e9a129ae660d500120738ae&product=inline-share-buttons" async="async"></script>
 </head>
 
 <body onload="getTextContent(window.localStorage.getItem('team_name'));">
     <div style="padding-top:5%;width:100%;">
-    <div onclick="location.href='/newkits'"  id="arrow_prev">
-    <div id="group_82">
-    <img id="path_82" src="{% static 'Newkit/pictures/back-arrow.png' %}">
-    </div>
-    </div>
-    
-    <div style="text-align:center">
-    <h1  id="page_title">  </h1>
-     
-    </div>
+        <div onclick="location.href='/newkits'" id="arrow_prev">
+            <div id="group_82">
+                <img id="path_82" src="{% static 'Newkit/pictures/back-arrow.png' %}">
+            </div>
+        </div>
 
-    <style>.bmc-button img{height: 34px !important;width: 25px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#5F7FFF !important;border-radius: 35px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 20px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;position:absolute;top:324px;left:78%;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/kwWPSZY"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="font-size:19px !important;"></span></a>
+        <div style="text-align:center">
+            <h1 id="page_title">  </h1>
+        </div>
 
+        <style>
+            .bmc-button img {
+                height: 34px !important;
+                width: 25px !important;
+                margin-bottom: 1px !important;
+                box-shadow: none !important;
+                border: none !important;
+                vertical-align: middle !important;
+            }
+
+            .bmc-button {
+                padding: 7px 10px 7px 10px !important;
+                line-height: 35px !important;
+                height: 51px !important;
+                text-decoration: none !important;
+                display: inline-flex !important;
+                color: #ffffff !important;
+                background-color: #5F7FFF !important;
+                border-radius: 35px !important;
+                border: 1px solid transparent !important;
+                padding: 7px 10px 7px 10px !important;
+                font-size: 20px !important;
+                letter-spacing: -0.08px !important;
+                box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+                -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+                margin: 0 auto !important;
+                font-family: 'Lato', sans-serif !important;
+                -webkit-box-sizing: border-box !important;
+                box-sizing: border-box !important;
+                -o-transition: 0.3s all linear !important;
+                -webkit-transition: 0.3s all linear !important;
+                position: absolute;
+                top: 324px;
+                left: 78%;
+                -moz-transition: 0.3s all linear !important;
+                -ms-transition: 0.3s all linear !important;
+                transition: 0.3s all linear !important;
+            }
+
+                .bmc-button:hover, .bmc-button:active, .bmc-button:focus {
+                    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+                    text-decoration: none !important;
+                    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+                    opacity: 0.85 !important;
+                    color: #ffffff !important;
+                }
+        </style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/kwWPSZY"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="font-size:19px !important;"></span></a>
     </div>
 
     <div id="info-card">
-    <h3>
-    I guess you're here because you love football as much as I do! </br></br>
-    I created this page to help out the teams which may struggle due Covid-19.</br></br> 
-    Help your team out by donating and sharing this page on socials so the respective clubs can get in contact to recieve their donations&#128075;&#x1F389&#128519;
-    </h3>
+        <h3>
+            I guess you're here because you love football as much as I do! </br></br>
+            I created this page to help out the teams which may struggle due Covid-19.</br></br>
+            Help your team out by donating and sharing this page on socials so the respective clubs can get in contact to recieve their donations&#128075;&#x1F389&#128519;
+        </h3>
     </div>
 
     <div>
 
-    <form id="x" method="POST">
-        {% csrf_token %}
-        <h3 id="donate">
-            Name
-        </h3>
-        <input type="text" id="name_input" style="width:90%;" placeholder="Your full name">
-        <h3 id="donate">
-            Donate
-        </h3>
-        <input type="text" id="payment_input" style="width:90%;" placeholder="&pound; 5.00"><br /><br />
-            <h3 style="font-size:12px;color:#9E9EA1;margin-top:-15px;padding-top:0px;">
-                 To Support the team during Covid-19
+        <form id="x" method="POST">
+            {% csrf_token %}
+            <h3 id="donate">
+                Name
             </h3>
-        <button id="submit_value" onclick="showerz();" type="submit">Donate</button>
-     
-    </form>
-    <form id="payment-form">
-        <div id="card-element">
-            <!-- Elements will create input elements here -->
+            <input type="text" id="name_input" style="width:90%;" placeholder="Your full name">
+            <h3 id="donate">
+                Donate
+            </h3>
+            <input type="text" id="payment_input" style="width:90%;" placeholder="&pound; 5.00"><br /><br />
+            <h3 style="font-size:12px;color:#9E9EA1;margin-top:-15px;padding-top:0px;">
+                To Support the team during Covid-19
+            </h3>
+            <button id="submit_value" onclick="showerz();" type="submit">Donate</button>
+        </form>
+        <form id="payment-form">
+            <div id="card-element">
+                <!-- Elements will create input elements here -->
+            </div>
+
+            <!-- We'll put the error messages in this element -->
+            <div id="card-errors" role="alert"></div>
+
+            <button id="submit">Confirm</button>
+        </form>
+        <!--   {% for post in all_msg %}-->
+        <!--{% endfor %}-->
+
+        <div style="margin-bottom:15%;margin-top:5%;" class="sharethis-inline-share-buttons"></div>
+        <div id="posts">
+            {% for post in posts %}
+            <p id="the-post">{{ post.name }} donated &pound;{{ post.value }} to {{ post.team.team }} team</p>
+            {% endfor %}
         </div>
+        <script>
 
-        <!-- We'll put the error messages in this element -->
-        <div id="card-errors" role="alert"></div>
+            $(document).ready(function () {
 
-        <button id="submit">Confirm</button>
-           </form>
-    <!--   {% for post in all_msg %}-->
-    <!--{% endfor %}-->
-			
-    <div style="margin-bottom:15%;margin-top:5%;" class="sharethis-inline-share-buttons"></div>
-      <div id="posts">
-        {% for post in posts %}
-        <p id="the-post" >{{ post.name }} donated &pound;{{ post.value }} to {{ post.team.team }} team</p>
-        {% endfor %}
-    </div>
-    <script>
-
-        $(document).ready(function () {
-
-            function getCookie(name) {
-                var cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    var cookies = document.cookie.split(';');
-                    for (var i = 0; i < cookies.length; i++) {
-                        var cookie = cookies[i].trim();
-                        // Does this cookie string begin with the name we want?
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
+                function getCookie(name) {
+                    var cookieValue = null;
+                    if (document.cookie && document.cookie !== '') {
+                        var cookies = document.cookie.split(';');
+                        for (var i = 0; i < cookies.length; i++) {
+                            var cookie = cookies[i].trim();
+                            // Does this cookie string begin with the name we want?
+                            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                break;
+                            }
                         }
                     }
+                    return cookieValue;
                 }
-                return cookieValue;
-            }
-            var csrftoken = getCookie('csrftoken');
-            function csrfSafeMethod(method) {
-                // these HTTP methods do not require CSRF protection
-                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-            }
-            $.ajaxSetup({
-                beforeSend: function (xhr, settings) {
-                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
-                    }
+                var csrftoken = getCookie('csrftoken');
+                function csrfSafeMethod(method) {
+                    // these HTTP methods do not require CSRF protection
+                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
                 }
-            })
-
-            $("#payment_input").change(function () {
-                console.log($(this).val())
-            });
-
-
-            $('#submit').click(function (e) {
-                e.preventDefault();
-                $.ajax({
-                    url: "{% url 'payments:charge' %}",
-                    type: 'POST',
-                    data: {
-                        "name": $('#name_input').val(),
-                        "donation": $('#payment_input').val(),
-                        "team": window.localStorage.getItem('team_name'),
-                    },
-                    success: function (response) {
-                        var p = document.createElement("p");
-                        p.id = "the-post";
-                        p.innerHTML = response.name + " donated &pound;" + response.value + " to " + response.team + " team";
-                        $("#posts").prepend(p)
+                $.ajaxSetup({
+                    beforeSend: function (xhr, settings) {
+                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                        }
                     }
                 })
-            });
 
+                $("#payment_input").change(function () {
+                    console.log($(this).val())
+                });
 
-            $('#submit_value').click(function (e) {
-                e.preventDefault();
-                var value = $('#payment_input').val();
-
-                $.ajax(
-                    {
+                $('#submit').click(function (e) {
+                    e.preventDefault();
+                    $.ajax({
                         url: "{% url 'payments:charge' %}",
                         type: 'POST',
                         data: {
-                             'mate': value,
-                            },
-                        success: function () {
-                            console.log('hi');
-
+                            "name": $('#name_input').val(),
+                            "donation": $('#payment_input').val(),
+                            "team": window.localStorage.getItem('team_name'),
                         },
-                    });
-                // }).done(function()
-                // {
-                //     $.ajax(
-                //     {
-                //         url: "{% url 'payments:charge' %}",
-                //         data: {
-                //             "name": "Stuart",
-                //             "donation": "9000",
-                //         },
-                //         type: "POST",
-                //         success: function (response)
-                //         {
-                //            console.log("2ndajax");
-                //         //   var p = document.createElement("p");
-                //         //   p.innerHTML = response.name + " " + response.value;
-                //         //   document.getElementById("posts").appendChild(p)
-                //         //    msgs = JSON.parse(response.msg)
-                //         //    for(i = 0; i < response.length; i++)
-                //         //    {
-                //         //        var p = document.createElement("p");
-                //         //        p.innerHTML = msgs[i].fields.name + " " + msgs[i].fields.value;
-                //         //        document.body.appendChild(p);
-                //         //    }
-                //         },
-                //     })
-                // });
-
-
-                var style =
-                {
-                    base:
-                    {
-                        color: "#32325d",
-                    }
-                };
-
-                var stripe = Stripe('pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY');
-                var elements = stripe.elements();
-                var card = elements.create("card", { style: style });
-                card.mount("#card-element");
-                card.addEventListener('change', function (event) {
-                    var displayError = document.getElementById('card-errors');
-                    if (event.error) {
-                        displayError.textContent = event.error.message;
-                    }
-                    else {
-                        displayError.textContent = '';
-                    }
+                        success: function (response) {
+                            var p = document.createElement("p");
+                            p.id = "the-post";
+                            p.innerHTML = response.name + " donated &pound;" + response.value + " to " + response.team + " team";
+                            $("#posts").prepend(p)
+                        }
+                    })
                 });
 
-                var form = document.getElementById('payment-form');
-                form.addEventListener('submit', function (ev) {
-                    ev.preventDefault();
-                    stripe.confirmCardPayment(data,
-                        {
-                            payment_method:
-                            {
-                                card: card,
-                                billing_details:
-                                {
-                                    name: 'Jenny Rosen'
-                                }
-                            }
-                        }).then(function (result) {
-                            if (result.error) {
-                                // Show error to your customer (e.g., insufficient funds)
-                                console.log(result.error.message);
-                            }
-                            else {
-                                // The payment has been processed!
-                                if (result.paymentIntent.status === 'succeeded') {
-                                    // Show a success message to your customer
-                                    // There's a risk of the customer closing the window before callback
-                                    // execution. Set up a webhook or plugin to listen for the
-                                    // payment_intent.succeeded event that handles any business critical
-                                    // post-payment actions.
-                                }
-                            }
-                        });
-                })
-            });
+                $('#submit_value').click(function (e) {
+                    e.preventDefault();
+                    var value = $('#payment_input').val();
 
-        });
-    </script>
+                    $.ajax(
+                        {
+                            url: "{% url 'payments:charge' %}",
+                            type: 'POST',
+                            data: {
+                                'mate': value,
+                            },
+                            success: function () {
+                                console.log('hi');
+
+                            },
+                        });
+                    // }).done(function()
+                    // {
+                    //     $.ajax(
+                    //     {
+                    //         url: "{% url 'payments:charge' %}",
+                    //         data: {
+                    //             "name": "Stuart",
+                    //             "donation": "9000",
+                    //         },
+                    //         type: "POST",
+                    //         success: function (response)
+                    //         {
+                    //            console.log("2ndajax");
+                    //         //   var p = document.createElement("p");
+                    //         //   p.innerHTML = response.name + " " + response.value;
+                    //         //   document.getElementById("posts").appendChild(p)
+                    //         //    msgs = JSON.parse(response.msg)
+                    //         //    for(i = 0; i < response.length; i++)
+                    //         //    {
+                    //         //        var p = document.createElement("p");
+                    //         //        p.innerHTML = msgs[i].fields.name + " " + msgs[i].fields.value;
+                    //         //        document.body.appendChild(p);
+                    //         //    }
+                    //         },
+                    //     })
+                    // });
+
+                    var style =
+                    {
+                        base:
+                        {
+                            color: "#32325d",
+                        }
+                    };
+
+                    var stripe = Stripe('pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY');
+                    var elements = stripe.elements();
+                    var card = elements.create("card", { style: style });
+                    card.mount("#card-element");
+                    card.addEventListener('change', function (event) {
+                        var displayError = document.getElementById('card-errors');
+                        if (event.error) {
+                            displayError.textContent = event.error.message;
+                        }
+                        else {
+                            displayError.textContent = '';
+                        }
+                    });
+
+                    var form = document.getElementById('payment-form');
+                    form.addEventListener('submit', function (ev) {
+                        ev.preventDefault();
+                        stripe.confirmCardPayment(data,
+                            {
+                                payment_method:
+                                {
+                                    card: card,
+                                    billing_details:
+                                    {
+                                        name: 'Jenny Rosen'
+                                    }
+                                }
+                            }).then(function (result) {
+                                if (result.error) {
+                                    // Show error to your customer (e.g., insufficient funds)
+                                    console.log(result.error.message);
+                                }
+                                else {
+                                    // The payment has been processed!
+                                    if (result.paymentIntent.status === 'succeeded') {
+                                        // Show a success message to your customer
+                                        // There's a risk of the customer closing the window before callback
+                                        // execution. Set up a webhook or plugin to listen for the
+                                        // payment_intent.succeeded event that handles any business critical
+                                        // post-payment actions.
+                                    }
+                                }
+                            });
+                    })
+                });
+
+            });
+        </script>
 </body>
 </html>

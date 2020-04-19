@@ -24,4 +24,4 @@ urlpatterns = [
 ] 
 
 
-urlpatterns += static(settings.STATIC_URL, document_root='static/')
+urlpatterns += static(settings.STATIC_URL, document_root='staticfiles/')

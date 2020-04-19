@@ -34,6 +34,6 @@ urlpatterns = [
 ]
 
 
-urlpatterns += static(settings.STATIC_URL, document_root='static/')
+urlpatterns += static(settings.STATIC_URL, document_root='staticfiles/')
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # Use static() to add url mapping to serve static files during development (only)
