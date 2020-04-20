@@ -16,17 +16,17 @@
     <link rel="manifest" href="{% static 'Newkit/site.webmanifest' %}">
 </head>
 
-<body>
+<body style="font-family:'lato';font-style: normal;">
 
     <form id="submitfilter" method="GET">
         {{filter.form|bootstrap}}
 
         <button type="submit" id="team_search" class="btn btn-primary">Search</button>
 
-        <h2 style="font-family:Lato !important;-webkit-font-smoothing: antialiased;">
-            Supporting the teams that need it the most during Covid-19. 	&#9917;🏆
+        <h2 style="font-family:'lato';font-style: normal;">
+            Make a difference by supporting the teams that need it the most during Covid-19. 	&#9917;🏆
         </h2>
-        <ul class="the-list" style="font-family:Lato !important;-webkit-font-smoothing: antialiased;">
+        <ul class="the-list" style="font-family:'lato';font-style: normal;">
             {% for snippet in filter.qs%}
             <li class="list-item">
                 <a href="/home/payments">{{snippet.team}}  </a>
@@ -34,10 +34,10 @@
             {% endfor %}
         </ul>
 
-        <div id="menuSlideContainer" style="font-family:Lato !important;-webkit-font-smoothing: antialiased;">
+        <div id="menuSlideContainer" style="font-family:'lato';font-style: normal;">
             <div id="menuSlideButton"><center><div class="pad">Leagues</div></center></div>
             <div id="menuSlideContent">
-                <div id="menuSlidePad" style="font-family:Lato !important;-webkit-font-smoothing: antialiased;">
+                <div id="menuSlidePad" style="font-family:'lato';font-style:normal;">
 
                     <button form="submitfilter" onclick="art4()" id="loadleague4">SkyBet Championship</button>
                     <button form="submitfilter" onclick="art5()" id="loadleague5">SkyBet League 1</button>
