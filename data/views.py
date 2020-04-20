@@ -35,7 +35,7 @@ def scrape(request):
 
     session = requests.Session()
     session.headers = {'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
-    url= "https://www.footballwebpages.co.uk/league-one"
+    url= "https://www.footballwebpages.co.uk/league-two"
     
     content = session.get(url,verify=False).content #grabs the html
 
@@ -47,7 +47,7 @@ def scrape(request):
         if 'title' in i.attrs:
             teams = i['title']
             for pic in i.find_all('img'):
-                url = "https://www.footballwebpages.co.uk/league-one" + pic.get('data-src') 
+                url = "https://www.footballwebpages.co.uk/league-two" + pic.get('data-src') 
             
                # stackoverflow solution
                 media_root = '\\django_projects\\Newkit\\media_root'
