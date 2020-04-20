@@ -183,7 +183,7 @@ environment = os.environ.get("ENVIRONMENT", default="development")
 
 if environment == "production":
     # Production Environment Settings
-    DEBUG = False  # Must be the case in production
+    DEBUG = True  # Must be the case in production
     # Change Database Configuration to Heroku's Database
     import dj_database_url 
     prod_db  =  dj_database_url.config(conn_max_age=500)
