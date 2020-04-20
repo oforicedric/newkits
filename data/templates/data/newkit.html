@@ -1,6 +1,7 @@
+{% load static %}
 {% load render_table from django_tables2 %}
 {% load bootstrap %}
-{% load static %}
+
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -8,6 +9,11 @@
 <head>
     <script src="{% static 'Newkit/scripts.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'Newkit/style.css' %}" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'Newkit/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href= href="{% static 'Newkit/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'Newkit/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'Newkit/site.webmanifest' %}">
 </head>
 
 <body>
@@ -16,7 +22,7 @@
         {{filter.form|bootstrap}}
 
         <button type="submit" id="team_search" class="btn btn-primary">Search</button>
- 
+
         <h2>
             Supporting the teams that need it the most during Covid-19. 	&#9917;🏆
         </h2>
@@ -32,17 +38,17 @@
             <div id="menuSlideButton"><center><div class="pad">Leagues</div></center></div>
             <div id="menuSlideContent">
                 <div id="menuSlidePad">
-                    
-        <button form="submitfilter" onclick="art4()" id="loadleague4">SkyBet Championship</button>
-        <button form="submitfilter" onclick="art5()" id="loadleague5">SkyBet League 1</button>
-        <button form="submitfilter" onclick="art6()" id="loadleague6">SkyBet League 2</button>
-        <button form="submitfilter" onclick="art()" id="loadleague">The Vanarama National League</button>
-        <button form="submitfilter" onclick="art2()" id="loadleague2">Vanarama National League north</button>
-        <button form="submitfilter" onclick="art3()" id="loadleague3">Vanarama National League south</button>
-        <button form="submitfilter" onclick="art10()" id="loadleague10">BetVictor Northern - Premier</button>
-        <button form="submitfilter" onclick="art7()" id="loadleague7">BetVictor Isthmian - Premier</button>
-        <button form="submitfilter" onclick="art8()" id="loadleague8">BetVictor Southern - Premier Central</button>
-        <button form="submitfilter" onclick="art9()" id="loadleague9">BetVictor Southern - Premier South</button>
+
+                    <button form="submitfilter" onclick="art4()" id="loadleague4">SkyBet Championship</button>
+                    <button form="submitfilter" onclick="art5()" id="loadleague5">SkyBet League 1</button>
+                    <button form="submitfilter" onclick="art6()" id="loadleague6">SkyBet League 2</button>
+                    <button form="submitfilter" onclick="art()" id="loadleague">The Vanarama National League</button>
+                    <button form="submitfilter" onclick="art2()" id="loadleague2">Vanarama National League north</button>
+                    <button form="submitfilter" onclick="art3()" id="loadleague3">Vanarama National League south</button>
+                    <button form="submitfilter" onclick="art10()" id="loadleague10">BetVictor Northern - Premier</button>
+                    <button form="submitfilter" onclick="art7()" id="loadleague7">BetVictor Isthmian - Premier</button>
+                    <button form="submitfilter" onclick="art8()" id="loadleague8">BetVictor Southern - Premier Central</button>
+                    <button form="submitfilter" onclick="art9()" id="loadleague9">BetVictor Southern - Premier South</button>
 
                 </div>
             </div>
