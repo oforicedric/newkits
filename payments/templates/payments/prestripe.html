@@ -19,7 +19,7 @@
     <div style="padding-top:5%;width:100%;">
         <div onclick="location.href='/newkits'" id="arrow_prev">
             <div id="group_82">
-                <img id="path_82" src="{% static 'Newkit/pictures/back-arrow.png' %}">
+                <img id="path_82" src="{% static 'Newkit/Pictures/back-arrow.png' %}">
             </div>
         </div>
 
@@ -226,7 +226,7 @@
                         }
                     };
 
-                    var stripe = Stripe('pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY');
+                    var stripe = Stripe('pk_live_yR6TzkUYJUisvIx94HB3XkDL00wBreDif4');
                     var elements = stripe.elements();
                     var card = elements.create("card", { style: style });
                     card.mount("#card-element");

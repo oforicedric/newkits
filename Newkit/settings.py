@@ -174,10 +174,29 @@ MEDIA_ROOT =os.path.join(VENV_PATH, 'Newkit/media_root')
 
 
 
-STRIPE_PUBLISHABLE_KEY = 'pk_test_sMuUdXvGiOEvFLSOAlPFFLaY008Afnd6pY'
-STRIPE_SECRET_KEY = 'sk_test_iBjWZaOdbwtP44prkHZeD2Jy002SrATNFK'
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET")
+
 django_heroku.settings(locals())
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+environment = os.environ.get("ENVIRONMENT", default="development")
+
+if environment == "production":
+    # Production Environment Settings
+    DEBUG = False  # Must be the case in production
+    # Change Database Configuration to Heroku's Database
+    import dj_database_url 
+    prod_db  =  dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(prod_db)
+
+    SECURE_BROWSER_XSS_FILTER = True  # Protects aganist cross site scripting
+    X_FRAME_OPTIONS = 'DENY'    # Protection for Clickjacking
+    SECURE_SSL_REDIRECT = False  # Redirect all http requests to https
+
+
+    # Set nosniff
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+
+    # Secure Cookies
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
