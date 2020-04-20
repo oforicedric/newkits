@@ -23,10 +23,10 @@
 
         <button type="submit" id="team_search" class="btn btn-primary">Search</button>
 
-        <h2>
+        <h2 style="font-family:Lato">
             Supporting the teams that need it the most during Covid-19. 	&#9917;🏆
         </h2>
-        <ul class="the-list">
+        <ul class="the-list" style="font-family:Lato">
             {% for snippet in filter.qs%}
             <li class="list-item">
                 <a href="/home/payments">{{snippet.team}}  </a>
@@ -34,10 +34,10 @@
             {% endfor %}
         </ul>
 
-        <div id="menuSlideContainer">
+        <div id="menuSlideContainer" style="font-family:Lato">
             <div id="menuSlideButton"><center><div class="pad">Leagues</div></center></div>
             <div id="menuSlideContent">
-                <div id="menuSlidePad">
+                <div id="menuSlidePad" style="font-family:Lato">
 
                     <button form="submitfilter" onclick="art4()" id="loadleague4">SkyBet Championship</button>
                     <button form="submitfilter" onclick="art5()" id="loadleague5">SkyBet League 1</button>
@@ -49,7 +49,6 @@
                     <button form="submitfilter" onclick="art7()" id="loadleague7">BetVictor Isthmian - Premier</button>
                     <button form="submitfilter" onclick="art8()" id="loadleague8">BetVictor Southern - Premier Central</button>
                     <button form="submitfilter" onclick="art9()" id="loadleague9">BetVictor Southern - Premier South</button>
-
                 </div>
             </div>
         </div>
