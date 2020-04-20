@@ -65,7 +65,7 @@ def scrape(request):
                 new_club =Club()
                 new_club.team = teams
               #  new_club.pic = local_filename
-                new_club.league = "The Vanarama National League
+                new_club.league = "The Vanarama National League"
            #     new_club.gender = "male"
                 new_club.save()
               
