@@ -248,8 +248,8 @@
                     console.log("here")
                     $("#submit").bind('click', function (ev) {
                         payment_intent = $("#payment-intent").val();
-                        console.log("hereiam");
                         ev.preventDefault();
+                        name = $("#name_input").val();
                         stripe.confirmCardPayment(payment_intent,
                             {
                                 payment_method:
@@ -257,7 +257,7 @@
                                     card: card,
                                     billing_details:
                                     {
-                                        name: 'Jenny Rosen'
+                                        name: name
                                     }
                                 }
                             }).then(function (result) {
